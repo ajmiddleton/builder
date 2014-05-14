@@ -1,0 +1,24 @@
+extends ../shared/template
+
+block content
+  .resource-bar
+    .resource
+      span#playerName Player:
+    .resource
+      span#cash $:
+    .resource
+      span#wood Wood:
+  h1 Builder
+
+  form
+    input(type='text', name='username', autofocus=true, placeholder='Username')
+    button.button.button-action#login Login
+  #storeUsername
+
+  button.button.button-primary#seed Plant Seed
+  button.button.button-primary#getForest Get Forest
+  button.button.button-primary#sellWood Sell Wood
+  #forest
+
+block scripts
+  script(src='/js/es6/compiled/game.js')
